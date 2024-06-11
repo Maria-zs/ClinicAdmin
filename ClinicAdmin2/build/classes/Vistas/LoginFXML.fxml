@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" opacity="0.92" prefHeight="615.0" prefWidth="557.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicadmin2.Controllers.LoginFXMLController">
+   <children>
+      <ImageView fitHeight="289.0" fitWidth="557.0" layoutY="-1.0" pickOnBounds="true" VBox.vgrow="ALWAYS">
+         <image>
+            <Image url="@../Imagenes/NombreLogo.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" layoutX="38.0" layoutY="350.0">
+         <children>
+            <ImageView fitHeight="289.0" fitWidth="133.0" layoutX="38.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/IconoLogin.png" />
+               </image>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+            <VBox prefHeight="198.0" prefWidth="291.0">
+               <children>
+                  <Label text="Usuario" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txt_User">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Contraseña">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <PasswordField fx:id="txt_Password" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" top="30.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="bt_IniciarSesion" alignment="CENTER" layoutX="254.0" layoutY="529.0" mnemonicParsing="false" onAction="#iniciarSesion" text="Iniciar sesión" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Button>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>

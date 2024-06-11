@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1109.0" style="-fx-background-color: #D0C2F9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicadmin2.Controllers.ListadoPacientesController">
+   <children>
+      <Label alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="526.0" text="Listado de pacientes registrados:">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <Text fill="#f3ecf4" stroke="#f5f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text=" ID   |    NOMBRE    |    APELLIDOS    |   EDAD    |     TELEFONO     |      EMAIL" wrappingWidth="1076.6708984375">
+         <VBox.margin>
+            <Insets left="30.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Verdana" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <ColorAdjust />
+               </input>
+            </DropShadow>
+         </effect>
+      </Text>
+      <TextArea fx:id="tArea_pacientes" prefHeight="493.0" prefWidth="1109.0" style="-fx-background-color: #D0C2F9;">
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" />
+         </padding>
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font>
+      </TextArea>
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Nombre:">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_Nombre" />
+            <Label text="Apellidos:">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_Apellidos" prefHeight="31.0" prefWidth="183.0" />
+            <Button fx:id="btn_Buscar" mnemonicParsing="false" onAction="#buscar" text="Buscar">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin></Button>
+            <Button fx:id="btn_Eliminar" mnemonicParsing="false" onAction="#eliminar" text="Eliminar paciente">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

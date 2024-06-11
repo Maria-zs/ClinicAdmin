@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="406.0" prefWidth="492.0" style="-fx-background-color: #D0C2F9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicadmin2.Controllers.RegistrarEmpleadoController">
+   <children>
+      <Label text="REGISTRO DE NUEVO EMPLEADO">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label text="Usuario:">
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="txt_User">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </VBox.margin>
+      </TextField>
+      <Label text="Contraseña:">
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="txt_Contraseña">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </VBox.margin>
+      </TextField>
+      <Label text="Rol:">
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="txt_Rol" promptText="1-Administrador  |   2-Empleado">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </VBox.margin>
+      </TextField>
+      <HBox>
+         <children>
+            <Button fx:id="bt_Registrar" alignment="CENTER" mnemonicParsing="false" onAction="#registrarUsuario" text="Registrar usuario">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <HBox.margin>
+                  <Insets left="100.0" right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="bt_Eliminar" mnemonicParsing="false" onAction="#eliminarUsuario" text="Eliminar usuario" />
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <Label fx:id="lb_Mensaje">
+         <VBox.margin>
+            <Insets left="150.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+   </children>
+</VBox>

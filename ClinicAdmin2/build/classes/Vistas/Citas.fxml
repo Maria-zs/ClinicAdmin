@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1109.0" style="-fx-background-color: #D0C2F9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicadmin2.Controllers.CitasController">
+   <children>
+      <Label alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="526.0" text="Listado de citas:">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <Text fill="#ebf2f2" stroke="#f5f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="ID CITA |   FECHA    |  HORA  | ID PX |    NOMBRE   |    APELLIDOS" wrappingWidth="1076.6708984375">
+         <VBox.margin>
+            <Insets left="30.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Verdana" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <ColorAdjust />
+               </input>
+            </DropShadow>
+         </effect>
+      </Text>
+      <TextArea fx:id="tArea_Citas" prefHeight="413.0" prefWidth="1109.0" style="-fx-background-color: #D0C2F9;">
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" />
+         </padding>
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextArea>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="635.0" prefHeight="43.0" prefWidth="1109.0">
+         <children>
+            <TextField fx:id="txt_Nombre" prefHeight="31.0" prefWidth="118.0" promptText="Nombre">
+               <HBox.margin>
+                  <Insets left="120.0" />
+               </HBox.margin></TextField>
+            <TextField fx:id="txt_ApellidosNueva" prefHeight="31.0" prefWidth="221.0" promptText="Apellidos">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Filtrar por FECHA">
+               <HBox.margin>
+                  <Insets left="135.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <DatePicker fx:id="fecha_citaBuscar" onAction="#buscarPorFecha" promptText="Selecciona fecha" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="593.0" prefHeight="43.0" prefWidth="1109.0">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <children>
+            <DatePicker fx:id="fecha_citaNueva" prefHeight="31.0" prefWidth="209.0" promptText="Selecciona una fecha">
+               <HBox.margin>
+                  <Insets left="125.0" right="10.0" />
+               </HBox.margin>
+            </DatePicker>
+            <Label text="Hora:">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="text_Hora" prefHeight="31.0" prefWidth="75.0" promptText="HH:MM">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Filtrar por APELLIDOS">
+               <HBox.margin>
+                  <Insets left="100.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_ApellidosBuscar" onAction="#buscarPorApellidos" promptText="Escribe apellidos">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#buscarPorApellidos" text="Buscar" />
+         </children>
+      </HBox>
+      <HBox prefHeight="39.0" prefWidth="1109.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#añadirCita" text="Añadir cita">
+               <HBox.margin>
+                  <Insets left="200.0" right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#eliminarCita" text="Borrar cita" />
+            <Button mnemonicParsing="false" onAction="#mostrarTodo" text="Ver todas las citas">
+               <HBox.margin>
+                  <Insets left="320.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <Label fx:id="txt_Mensaje">
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Label>
+   </children>
+</VBox>

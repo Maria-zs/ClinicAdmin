@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1109.0" style="-fx-background-color: #D0C2F9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicadmin2.Controllers.ServiciosController">
+   <children>
+      <Label alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="526.0" text="Listado de servicios:">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <Text fill="#f3ecf4" stroke="#f5f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text=" NOMBRE       |      PRECIO    |    DESCRIPCION" wrappingWidth="1076.6708984375">
+         <VBox.margin>
+            <Insets left="30.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Verdana" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <ColorAdjust />
+               </input>
+            </DropShadow>
+         </effect>
+      </Text>
+      <TextArea fx:id="tArea_servicios" prefHeight="493.0" prefWidth="1109.0" style="-fx-background-color: #D0C2F9;">
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" />
+         </padding>
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font>
+      </TextArea>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="635.0" prefHeight="43.0" prefWidth="1109.0">
+         <children>
+            <Label alignment="CENTER" text="Nombre:">
+               <HBox.margin>
+                  <Insets left="30.0" right="35.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_Nombre" prefHeight="31.0" prefWidth="205.0" />
+            <Label alignment="CENTER" layoutX="442.0" layoutY="21.0" text="Servicio a borrar:">
+               <HBox.margin>
+                  <Insets left="300.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_ServicioBorrado">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#eliminarServicio" text="Eliminar">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="1109.0">
+         <children>
+            <Label alignment="CENTER" text="Precio:">
+               <HBox.margin>
+                  <Insets left="30.0" right="50.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_Precio" prefHeight="31.0" prefWidth="65.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="635.0" prefHeight="43.0" prefWidth="1109.0">
+         <children>
+            <Label text="Descripción:">
+               <HBox.margin>
+                  <Insets left="30.0" right="15.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_Descripcion" prefHeight="31.0" prefWidth="543.0">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#añadirServicio" text="Añadir nuevo servicio" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

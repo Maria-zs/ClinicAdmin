@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1109.0" style="-fx-background-color: #D0C2F9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicadmin2.Controllers.MaterialController">
+   <children>
+      <Label alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="526.0" text="Listado de material actual:">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <Text fill="#f3ecf4" stroke="#f5f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCTO              |      CANTIDAD" wrappingWidth="1076.6708984375">
+         <VBox.margin>
+            <Insets left="30.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Verdana" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <ColorAdjust />
+               </input>
+            </DropShadow>
+         </effect>
+      </Text>
+      <TextArea fx:id="tArea_Material" prefHeight="493.0" prefWidth="1109.0" style="-fx-background-color: #D0C2F9;">
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" />
+         </padding>
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font>
+      </TextArea>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="635.0" prefHeight="43.0" prefWidth="1109.0">
+         <children>
+            <Label alignment="CENTER" text="Producto:">
+               <HBox.margin>
+                  <Insets left="30.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_Producto" prefHeight="31.0" prefWidth="205.0" />
+            <Label alignment="CENTER" layoutX="442.0" layoutY="21.0" text="Cantidad:">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_Cantidad" prefHeight="31.0" prefWidth="89.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#actualizarMaterial" text="Actualizar">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Label text="ó">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#añadirMaterial" text="Añadir nuevo producto">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="593.0" prefHeight="43.0" prefWidth="1109.0">
+         <children>
+            <Label alignment="CENTER" text="Producto a eliminar">
+               <HBox.margin>
+                  <Insets left="30.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txt_ProductoEliminado" prefHeight="31.0" prefWidth="205.0" />
+            <Button mnemonicParsing="false" onAction="#borrarMaterial" text="Eliminar">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="lb_Mensaje">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
